@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
       // Show loading indicator
       resultsContainer.innerHTML = "<p>Loading jobs...</p>";
       
-      // Call your local proxy instead
+      // Call the local proxy instead
       fetch(`http://localhost:3000/proxy/jobs?search=${encodeURIComponent(search)}`)
         .then(res => {
           if (!res.ok) {
