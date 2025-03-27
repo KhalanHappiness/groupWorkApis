@@ -1,5 +1,5 @@
 // local-proxy.js
-// The local proxy creates a server that acts as a middleman. My frontend makes requests to the local server, which then makes the request to findwork.dev and returns the response.
+// This file creates a server that acts as a middleman. My frontend makes requests to the local server, which then makes the request to findwork.dev and returns the response.
 const express = require('express');
 //This imports the Express.js framework, which is a popular web application framework for Node.js.
 const cors = require('cors');
@@ -15,7 +15,7 @@ const PORT = 3000;
 // Enable CORS for all routes
 app.use(cors());
 
-// Serve your static files the HTML CSS and Javascript
+// It allows us to serve our frontend application files directly from this server.
 app.use(express.static('public'));
 
 // creates Proxy endpoint to access the FindWork API
